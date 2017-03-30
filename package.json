@@ -1,0 +1,23 @@
+{
+  "name": "hello-docker",
+  "version": "1.0.0",
+  "description": "a demo for learning docker",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha",
+    "dev": "npm install; ./node_modules/.bin/nodemon index.js",
+    "start": "node index.js"
+  },
+  "keywords": [
+    "docker"
+  ],
+  "author": "ningcong.liang",
+  "license": "ISC",
+  "dependencies": {
+    "koa": "^2.0.1"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "nodemon": "^1.11.0"
+  }
+}

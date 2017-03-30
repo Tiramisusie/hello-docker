@@ -1,0 +1,32 @@
+version: '2'
+
+services: 
+  nginx: 
+    image: docker.sankuai.com/liangningcong/nginx:multi
+    links: 
+      - node:node
+      - node2:node2
+      - node3:node3
+    ports: 
+      - '8080:80'
+
+  node:
+    image: docker.sankuai.com/liangningcong/hello-docker
+    ports:
+      - '1234'
+    environment:
+      - ENV='staging'
+
+  node2:
+    image: docker.sankuai.com/liangningcong/hello-docker
+    ports:
+      - '1234'
+    environment:
+      - ENV='staging2'
+
+  node3:
+    image: docker.sankuai.com/liangningcong/hello-docker
+    ports:
+      - '1234'
+    environment:
+      - ENV='stagin3'
